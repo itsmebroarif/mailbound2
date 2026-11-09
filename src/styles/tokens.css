@@ -1,0 +1,62 @@
+/* MATERIAL DESIGN 3 TOKENS — MAILBOUND theme "Courier Sunrise".
+   Palette direction derived from the designmd `material` kit tokens
+   (design-tokens by law2hill: primary #1267dd, green #07a49a, purple #7327f0),
+   re-expressed as a full MD3 tonal set by hand. Replace freely once
+   DESIGNMD_API_KEY is configured for richer kit details. */
+
+:root {
+  /* Primary (mail blue) */
+  --md-primary: #1565df;
+  --md-on-primary: #ffffff;
+  --md-primary-container: #d4e3ff;
+  --md-on-primary-container: #001b3f;
+  --md-secondary: #07a49a;
+  --md-on-secondary: #ffffff;
+  --md-secondary-container: #ccf5f0;
+  --md-on-secondary-container: #00201e;
+  --md-tertiary: #7327f0;
+  --md-tertiary-container: #ecdcff;
+  --md-on-tertiary-container: #250059;
+
+  /* Neutrals */
+  --md-surface: #fdf8f8;
+  --md-surface-dim: #d8dbe2;
+  --md-surface-container-low: #fafafa;
+  --md-surface-container: #f0f1f6;
+  --md-surface-container-high: #e9eaf4;
+  --md-surface-container-highest: #e3e4f0;
+  --md-on-surface: #1b1c20;
+  --md-on-surface-variant: #45464f;
+  --md-outline: #767782;
+  --md-outline-variant: #c6c6d1;
+  --md-error: #ba1a1a;
+  --md-error-container: #ffdad6;
+
+  /* Mailbound brand accents (game-flavoured) */
+  --mb-sky: #0e1030;          /* deep night navy — 3D outline colour source */
+  --mb-amber: #ffb43d;
+  --mb-rose: #ff5d73;
+
+  /* Elevation shadows (MD3 spec levels) */
+  --md-elev-1: 0 1px 2px rgba(0,0,0,.3), 0 1px 3px 1px rgba(0,0,0,.15);
+  --md-elev-2: 0 1px 2px rgba(0,0,0,.3), 0 2px 6px 2px rgba(0,0,0,.15);
+  --md-elev-3: 0 4px 8px 3px rgba(0,0,0,.15), 0 1px 3px rgba(0,0,0,.3);
+
+  /* Shape */
+  --md-radius-xs: 6px;
+  --md-radius-sm: 10px;
+  --md-radius-md: 16px;
+  --md-radius-lg: 24px;
+  --md-radius-full: 999px;
+
+  /* Motion (MD3 easing) */
+  --md-dur-fast: 120ms;
+  --md-dur-med: 240ms;
+  --md-dur-long: 420ms;
+  --md-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --md-ease-emphasized: cubic-bezier(0.3, 0, 0.2, 1);
+
+  /* Type */
+  --font-display: 'Outfit', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Outfit', 'Segoe UI', system-ui, sans-serif;
+}

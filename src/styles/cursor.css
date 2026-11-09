@@ -1,0 +1,69 @@
+/* CUSTOM CURSOR — courier-amber ring + cream dot, MD3 motion */
+
+html, body, #app {
+  cursor: none;
+}
+
+#mb-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  z-index: 99999;
+  pointer-events: none;
+  will-change: transform;
+  user-select: none;
+}
+
+.mb-cursor-ring {
+  position: absolute;
+  left: -21px;
+  top: -21px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 3px solid #ffd34d;
+  box-shadow: 0 0 0 2.5px #141628, 0 6px 16px rgba(0, 0, 0, 0.45);
+  transition: transform 150ms var(--md-ease-emphasized), border-color 150ms, background 150ms;
+}
+
+.mb-cursor-dot {
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 2px #141628;
+}
+
+#mb-cursor.is-hover .mb-cursor-ring {
+  transform: scale(1.38);
+  border-color: #1565df;
+  background: rgba(21, 101, 223, 0.14);
+}
+
+#mb-cursor.is-down .mb-cursor-ring {
+  transform: scale(0.74);
+  border-color: #ff5d73;
+  background: rgba(255, 93, 115, 0.2);
+}
+
+#mb-cursor.is-hover.is-down .mb-cursor-ring {
+  transform: scale(0.9);
+  border-color: #ff8a5c;
+}
+
+#mb-cursor.is-hidden {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mb-cursor-ring { transition: none; }
+}
+
+@media (pointer: coarse) {
+  html, body, #app { cursor: auto; }
+}

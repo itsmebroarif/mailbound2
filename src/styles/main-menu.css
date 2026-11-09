@@ -1,0 +1,85 @@
+/* MAIN MENU — Material Design 3 hero layout */
+
+.main-menu-screen {
+  justify-content: flex-start;
+  padding-inline: clamp(20px, 6vw, 96px);
+  background: linear-gradient(90deg,
+      rgba(14, 16, 48, 0.92) 0 26%,
+      rgba(14, 16, 48, 0.55) 44%,
+      rgba(14, 16, 48, 0) 62%);
+}
+
+.mm-left {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  max-width: 640px;
+  padding-block: 8vh;
+}
+
+.mm-brand { display: flex; flex-direction: column; gap: 10px; }
+
+.mm-kicker {
+  font: 800 12px/1 var(--font-display);
+  letter-spacing: 4px;
+  color: var(--mb-amber);
+  padding: 6px 14px;
+  width: max-content;
+  border-radius: var(--md-radius-full);
+  background: rgba(255, 180, 61, 0.14);
+  border: 1px solid rgba(255, 180, 61, 0.4);
+}
+
+.mm-title {
+  font: 800 clamp(64px, 9vw, 112px)/0.95 var(--font-display);
+  margin: 0;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 0 6px 0 rgba(0, 0, 0, 0.35), 0 0 80px rgba(21, 101, 223, 0.55);
+}
+.mm-title span {
+  background: linear-gradient(160deg, #ffd34d 20%, #ff8a5c 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.mm-tagline {
+  font: 400 18px/1.35 var(--font-display);
+  color: #cfd6ff;
+  margin: 4px 0 0;
+  max-width: 34ch;
+}
+
+.mm-actions { display: flex; flex-direction: column; gap: 14px; }
+.mm-actions .md-btn { font-size: 17px; padding: 15px 26px; box-shadow: 0 0 42px rgba(21, 101, 223, 0.45); width: max-content; }
+.mm-row { display: flex; gap: 12px; }
+
+.mm-foot { display: flex; gap: 8px; flex-wrap: wrap; max-width: 560px; }
+.mm-foot .md-chip { background: rgba(255, 255, 255, 0.09); color: #cfd6ff; }
+
+.mm-right {
+  position: absolute;
+  right: clamp(24px, 7vw, 110px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 330px;
+}
+
+.mm-savecard { background: rgba(24, 26, 56, 0.88); border: 1px solid rgba(255, 255, 255, 0.14); color: #ffffff; }
+.mm-savecard .screen-title { color: inherit; font-size: 20px; }
+.mm-stat {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 14px;
+  color: #cfd6ff;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.12);
+  padding: 8px 0;
+}
+.mm-stat b { color: #ffffff; font-variant-numeric: tabular-nums; }
+
+@media (max-width: 900px) {
+  .mm-right { display: none; }
+  .mm-title { font-size: clamp(56px, 13vw, 84px); }
+}
